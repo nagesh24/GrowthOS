@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  input, select, textarea {
+    @apply border border-gray-200 rounded-lg px-3 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors bg-white;
+  }
+  button { @apply transition-all; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-brand-dark disabled:opacity-50 cursor-pointer;
+  }
+  .btn-secondary {
+    @apply border border-gray-200 bg-white text-gray-700 px-4 py-2 rounded-lg text-sm hover:bg-gray-50 cursor-pointer;
+  }
+  .card {
+    @apply bg-white border border-gray-100 rounded-xl p-4 shadow-sm;
+  }
+  .kpi-card {
+    @apply bg-gray-50 rounded-xl p-4;
+  }
+  .badge-hot   { @apply text-xs px-2 py-0.5 rounded-full bg-red-50 text-red-700 font-medium; }
+  .badge-warm  { @apply text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-medium; }
+  .badge-cold  { @apply text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 font-medium; }
+  .badge-won   { @apply text-xs px-2 py-0.5 rounded-full bg-green-50 text-green-700 font-medium; }
+}
